@@ -29,7 +29,7 @@
             <hr>
             <p>{{travelDestination.descriptionLong}}</p>
             <div class="d-flex justify-content-between">
-                <button class="btn btn-info p-3">Book for {{travelDestination.price | currency: "EUR"}}</button>
+                <button class="btn btn-info p-3" (click)="addToCart(travelDestination)">Book for {{travelDestination.price | currency: "EUR"}}</button>
             </div>
         </div>
         <div class="col-md-7 my-auto my-auto">
