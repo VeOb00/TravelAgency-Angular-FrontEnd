@@ -36,5 +36,56 @@
             <dd class="col-sm-2 text-info h4"><b>{{priceCalculation.finalPrice | currency: "EUR"}}</b></dd>
         </dl>
     </div>
+
+    <div class="container mt-5">
+        
+        <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="formFName">First name *</label>
+                    <input type="text" class="form-control" id="formFName" formControlName="firstName" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="formLName">Last name *</label>
+                    <input type="text" class="form-control" id="formLName" formControlName="lastName" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="formCity">City *</label>
+                    <input type="text" class="form-control" id="formCity" formControlName="city" required>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="formState">State *</label>
+                    <select class="custom-select" id="formState" formControlName="state" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>Vienna</option>
+                        <option>Lower Austria</option>
+                        <option>Upper Austria</option>
+                        <option>Styria</option>
+                        <option>Tyrol</option>
+                        <option>Carinthia</option>
+                        <option>Salzburg</option>
+                        <option>Vorarlberg</option>
+                        <option>Burgenland</option>
+                    </select>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="formZip">Zip *</label>
+                    <input type="text" class="form-control" id="formZip" formControlName="zip" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="formEmail">e-mail *</label>
+                    <input type="text" class="form-control" id="formEmail" formControlName="email" required>
+                </div>
+            </div>
+            <div class="form-row my-1">
+                <small>* Required</small>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit form</button>
+        </form>
+    </div>
 </ng-template>
 <div class="footer-bottom"></div>
