@@ -5,6 +5,7 @@ import { TravelsPageComponent } from './travels-page/travels-page.component';
 import { BlogPageComponent } from './blog-page/blog-page.component';
 import { ShoppingCartPageComponent } from './shopping-cart-page/shopping-cart-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
+import { TravelDestinationDetailsComponent } from './travel-destination-details/travel-destination-details.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,9 @@ const routes: Routes = [
     },
     {
         path: "contact", component: ContactPageComponent
+    },
+    {
+        path: "destinationDetail/:destinationId", component: TravelDestinationDetailsComponent
     }
 ];
 

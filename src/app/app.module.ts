@@ -10,6 +10,7 @@ import { TravelsPageComponent } from './travels-page/travels-page.component';
 import { FooterComponent } from './footer/footer.component';
 import { ShoppingCartPageComponent } from './shopping-cart-page/shopping-cart-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
+import { TravelDestinationDetailsComponent } from './travel-destination-details/travel-destination-details.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
     TravelsPageComponent,
     FooterComponent,
     ShoppingCartPageComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    TravelDestinationDetailsComponent
   ],
   imports: [
     BrowserModule,
