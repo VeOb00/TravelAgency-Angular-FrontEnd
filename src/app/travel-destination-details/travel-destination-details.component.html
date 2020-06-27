@@ -26,13 +26,14 @@
                 </svg>
                 from {{travelDestination.startDate}}
             </p>
-            <hr>
-            <p>{{travelDestination.descriptionLong}}</p>
-            <div class="d-flex justify-content-between">
+            
+            <div class="d-flex justify-content-between mt-5">
                 <button class="btn btn-info p-3" (click)="addToCart(travelDestination)">Book for {{travelDestination.price | currency: "EUR"}}</button>
             </div>
+            <hr>
+            <p>{{travelDestination.descriptionLong}}</p>
         </div>
-        <div class="col-md-7 my-auto my-auto">
+        <div class="col-md-7 mt-2">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li *ngIf="travelDestination.image" data-target="#carouselExampleIndicators" data-slide-to="0"
