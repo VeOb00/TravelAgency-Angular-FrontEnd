@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ShoppingCartPageComponent } from './shopping-cart-page/shopping-cart-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { TravelDestinationDetailsComponent } from './travel-destination-details/travel-destination-details.component';
+import { BlogpostComponent } from './blogpost/blogpost.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TravelDestinationDetailsComponent } from './travel-destination-details/
     FooterComponent,
     ShoppingCartPageComponent,
     ContactPageComponent,
-    TravelDestinationDetailsComponent
+    TravelDestinationDetailsComponent,
+    BlogpostComponent
   ],
   imports: [
     BrowserModule,
