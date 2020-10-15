@@ -1,4 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+$dark-green: #153b40;
+$mid-dark-green: #035959;
+$mid-light-green: #027368;
+$light-green: #6da69b;
+$dirty-rose: #d9b6a3;
+
 img {
-    width: 100%;
+  width: 100%;
+}
+
+* {
+  color: $dark-green;
+}
+
+.jumbotron {
+  .container {
+    .display-3,
+    .display-4,
+    .lead {
+      color: white;
+    }
+  }
 }

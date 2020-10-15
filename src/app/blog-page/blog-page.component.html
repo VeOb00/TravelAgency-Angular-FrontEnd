@@ -1,4 +1,4 @@
-<div class="jumbotron jumbotron-fluid text-light">
+<div class="jumbotron jumbotron-fluid text-light mb-5">
     <div class="container">
         <br><br>
         <h1 class="display-4">Get inspired</h1>
@@ -10,11 +10,9 @@
     <div class="row">
         <div class="col-md-6 col-lg-4 mb-4 d-md-flex align-items-md-stretch"
             *ngFor="let post of posts ; index as postID">
-            <a [routerLink]="['/blogpost', postID]" routerLinkActive="router-link-active"
-                class="card-group">
+            <a [routerLink]="['/blogpost', postID]" routerLinkActive="router-link-active" class="card-group">
                 <div class="card shadow-sm ">
-                    <img src="{{post.teaserImage}}" class="card-img-top"
-                        alt="{{post.name}} image">
+                    <img src="{{post.teaserImage}}" class="card-img-top" alt="{{post.name}} image">
                     <div class="card-body">
                         <h3 class="card-title text-capitalize">{{post.blogTitle}}</h3>
                         <p *ngIf="post.place">{{post.place}}, {{post.country}}</p>

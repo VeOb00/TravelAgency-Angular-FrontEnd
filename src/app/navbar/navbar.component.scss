@@ -1,11 +1,13 @@
 * {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 img {
-    width: auto;
+  width: auto;
 }
 
 nav {
-    background-image: linear-gradient(rgba(39, 82, 94, 0.8), rgba(0, 0, 0, 0.0));
+  background-image: linear-gradient(rgba(3, 89, 89, 0.8), rgba(0, 0, 0, 0));
+  transition: all 350ms ease-in-out;
+  background-blend-mode: overlay;
 }
