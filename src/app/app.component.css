@@ -1,0 +1,27 @@
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#footer-neg-space {
+  height: 550px;
+}
+
+@media (max-width: 768px) {
+  #footer-neg-space {
+    height: 600px;
+  }
+}
+
+@media (max-width: 576px) {
+  #footer-neg-space {
+    height: 700px;
+  }
+}
+
+@media (max-width: 370px) {
+  #footer-neg-space {
+    height: 880px;
+  }
+}
+/*# sourceMappingURL=app.component.css.map */

@@ -1,0 +1,16 @@
+* {
+  font-size: 1.5rem;
+}
+
+img {
+  width: auto;
+}
+
+nav {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#035959), to(rgba(3, 89, 89, 0.8)));
+  background-image: linear-gradient(#035959, rgba(3, 89, 89, 0.8));
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+  background-blend-mode: darken;
+}
+/*# sourceMappingURL=navbar.component.css.map */

@@ -1,0 +1,47 @@
+img {
+  width: 100%;
+}
+
+.jumbotron .container .display-3,
+.jumbotron .container .display-4,
+.jumbotron .container .lead {
+  color: white;
+}
+
+.btn-info {
+  background-color: #029788;
+  border-color: #95b7b0;
+}
+
+.btn-info:hover {
+  background-color: #035959;
+  border-color: #035959;
+}
+
+.btn-outline-info {
+  border-color: #029788;
+  color: #029788;
+  border: 1px solid #029788;
+}
+
+.btn-outline-info:active,
+.btn-outline-info:hover {
+  background-color: #029788;
+}
+
+.btn-outline-info:not(:disabled):not(.disabled).active,
+.btn-outline-info:not(:disabled):not(.disabled):active,
+.show > .btn-outline-info.dropdown-toggle {
+  background-color: #029788;
+}
+
+fa-icon {
+  color: #95b7b0;
+}
+
+fa-icon:hover {
+  -webkit-transition: 1s;
+  transition: 1s;
+  color: #029788;
+}
+/*# sourceMappingURL=styles.css.map */

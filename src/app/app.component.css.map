@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,eAAe,CAAC;EACd,QAAQ,EAAE,QAAQ;EAClB,UAAU,EAAE,KAAK;CAClB;;AAED,AAAA,iBAAiB,CAAC;EAChB,MAAM,EAAE,KAAK;CACd;;AAED,MAAM,EAAE,SAAS,EAAE,KAAK;EACtB,AAAA,iBAAiB,CAAC;IAChB,MAAM,EAAE,KAAK;GACd;;;AAGH,MAAM,EAAE,SAAS,EAAE,KAAK;EACvB,AAAA,iBAAiB,CAAC;IACjB,MAAM,EAAE,KAAK;GACb;;;AAGF,MAAM,EAAE,SAAS,EAAE,KAAK;EACtB,AAAA,iBAAiB,CAAC;IAChB,MAAM,EAAE,KAAK;GACd",
+    "sources": [
+        "app.component.scss",
+        "styles/_bootstrap-breakpoints.scss"
+    ],
+    "names": [],
+    "file": "app.component.css"
+}

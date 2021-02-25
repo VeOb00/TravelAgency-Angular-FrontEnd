@@ -1,0 +1,47 @@
+.card-image-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background-color: lightgray;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.card-image:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  opacity: 0.8;
+}
+
+.jumbotron {
+  background-image: url("../../assets/img/blogpg-hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.jumbotron .display-3 {
+  font-family: "Libre Baskerville", serif;
+}
+
+a {
+  text-decoration: none;
+  color: #029788;
+}
+
+.highlight-card .card-image-wrapper {
+  height: 500px;
+  width: 100vw;
+}
+/*# sourceMappingURL=blog-page.component.css.map */

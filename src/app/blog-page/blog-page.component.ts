@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BlogPostsService } from './blogpost/blog-posts.service';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 import { BlogPost } from './blogpost/blogPosts';
 
 @Component({
@@ -8,13 +9,11 @@ import { BlogPost } from './blogpost/blogPosts';
   styleUrls: ['./blog-page.component.scss'],
 })
 export class BlogPageComponent implements OnInit {
-  posts: BlogPost[];
+  posts$: Observable<BlogPost[]> = this.store.select(state => state.posts);
 
-  constructor(private blogpostService: BlogPostsService) {}
+  constructor(private store: Store <{ posts: BlogPost[] }>) {}
 
   ngOnInit(): void {
-    this.blogpostService.getAll().subscribe((data) => {
-      this.posts = data;
-    });
+	this.store.dispatch({ type: '[Blogs Page] Load Blogs'})
   }
 }

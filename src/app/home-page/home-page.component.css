@@ -1,0 +1,82 @@
+.jumbotron {
+  padding-top: 8rem;
+  background-image: url("../../assets/img/homepg-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 85vh;
+  background-color: #153b40;
+  position: relative;
+  border: 1px solid black;
+}
+
+.hero-textbox {
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 40px;
+  z-index: 1;
+  padding: 30px;
+}
+
+.jumbotron .display-3 {
+  font-family: "Libre Baskerville", serif;
+}
+
+dt {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 425px) {
+  .jumbotron {
+    height: unset;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.2))), url("../../assets/img/homepg-hero.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url("../../assets/img/homepg-hero.jpg");
+    position: unset;
+  }
+  .hero-textbox {
+    background-color: unset;
+    -webkit-backdrop-filter: unset;
+            backdrop-filter: unset;
+    position: unset;
+    padding: unset;
+  }
+  .display-4-custom {
+    font-size: 1.6rem;
+  }
+  .display-3-custom {
+    font-size: 2.6rem;
+    margin: 1rem 0 2.6rem 0;
+  }
+  .lead-custom {
+    font-size: 1.2rem;
+    padding-left: unset;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 4rem;
+  }
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-textbox {
+    background-color: unset;
+    -webkit-backdrop-filter: unset;
+            backdrop-filter: unset;
+    position: unset;
+    padding: unset;
+  }
+  .jumbotron {
+    height: unset;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.2))), url("../../assets/img/homepg-hero.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url("../../assets/img/homepg-hero.jpg");
+    position: unset;
+  }
+}
+/*# sourceMappingURL=home-page.component.css.map */

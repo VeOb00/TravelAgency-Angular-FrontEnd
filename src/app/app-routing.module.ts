@@ -20,7 +20,6 @@ const routes: Routes = [
   {
     path: 'blogpost/:postID',
     component: BlogpostComponent,
-	resolve: { blogpost: BlogPostResolver }
   },
   {
     path: 'travels',

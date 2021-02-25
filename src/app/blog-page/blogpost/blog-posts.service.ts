@@ -13,9 +13,10 @@ export class BlogPostsService {
   constructor(private httpClient: FakeHttpClient) {}
 
   public getAll(): Observable<BlogPost[]> {
-    return this.httpClient
-      .get<BlogPostBackendRaw[]>('/api/blog')
-      .pipe(map((rawBlogposts) => this.mapToBlogpost(rawBlogposts)));
+    // return this.httpClient
+    //   .get<BlogPostBackendRaw[]>('/api/blog')
+    //   .pipe(map((rawBlogposts) => this.mapToBlogpost(rawBlogposts)));
+	return this.httpClient.get('/api/blog');
   }
 
   public get(blogpostId: number): Observable<BlogPost> {

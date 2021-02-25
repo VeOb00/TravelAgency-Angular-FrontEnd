@@ -15,9 +15,11 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
 import { TravelDestinationDetailsComponent } from './travels-page/travel-destination-details/travel-destination-details.component';
 import { BlogpostComponent } from './blog-page/blogpost/blogpost.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
-import { GeneralErrorHandler } from "./shared/general-error-handler";
+import { GeneralErrorHandler } from './shared/general-error-handler';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { durationPipe } from './travels-page/duration.pipe';
+import { BlogEffects } from './blog-page/blog.effects';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -38,9 +40,10 @@ import { durationPipe } from './travels-page/duration.pipe';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    EffectsModule.forRoot([BlogEffects]),
   ],
-  providers: [{provide: ErrorHandler, useClass: GeneralErrorHandler}],
-  bootstrap: [AppComponent]
+  providers: [{ provide: ErrorHandler, useClass: GeneralErrorHandler }],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

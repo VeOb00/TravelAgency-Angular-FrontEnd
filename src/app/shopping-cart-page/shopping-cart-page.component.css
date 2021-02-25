@@ -1,0 +1,18 @@
+.jumbotron {
+  background-image: url("../../assets/img/travelspg-hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.jumbotron .display-3 {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.footer-bottom {
+  min-height: 25vh;
+}
+
+.total-sum {
+  border-bottom: 1px double black;
+}
+/*# sourceMappingURL=shopping-cart-page.component.css.map */
