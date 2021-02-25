@@ -1,8 +1,28 @@
+@import '../app/styles/bootstrap-breakpoints';
+
 #page-container {
   position: relative;
   min-height: 100vh;
 }
 
 #footer-neg-space {
-  height: 220px;
+  height: 550px;
+}
+
+@media (max-width: $bs-md) {
+  #footer-neg-space {
+    height: 600px;
+  }
+}
+
+@media (max-width: $bs-sm) {
+	#footer-neg-space {
+		height: 700px;
+	}
+}
+
+@media (max-width: 370px) {
+  #footer-neg-space {
+    height: 880px;
+  }
 }

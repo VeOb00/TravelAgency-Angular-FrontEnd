@@ -1,0 +1,15 @@
+@import '../../styles/carousel-galleries';
+
+.jumbotron {
+    background-image: url("../../../assets/img/travelspg-hero.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.jumbotron .display-3 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+.img-wrapper {
+	height: 400px;
+}

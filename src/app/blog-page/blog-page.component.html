@@ -1,29 +1,82 @@
 <div class="jumbotron jumbotron-fluid text-light mb-5">
-    <div class="container">
-        <br><br>
-        <h1 class="display-4">Get inspired</h1>
-        <h1 class="display-3 ml-5">to travel</h1>
-    </div>
+	<div class="container">
+		<br><br>
+		<h1 class="display-4">Get inspired</h1>
+		<h1 class="display-3 ml-5">to travel</h1>
+	</div>
 </div>
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-6 col-lg-4 mb-4 d-md-flex align-items-md-stretch"
-            *ngFor="let post of posts ; index as postID">
-            <a [routerLink]="['/blogpost', postID]" routerLinkActive="router-link-active" class="card-group">
-                <div class="card shadow-sm ">
-                    <img src="{{post.teaserImage}}" class="card-img-top" alt="{{post.name}} image">
-                    <div class="card-body">
-                        <h3 class="card-title text-capitalize">{{post.blogTitle}}</h3>
-                        <p *ngIf="post.place">{{post.place}}, {{post.country}}</p>
-                        <hr>
-                        <p class="card-text">{{post.description}}</p>
-                    </div>
-                    <div class="card-footer">
-                        <p>Created: {{post.date}}</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
+
+	<div class="row">
+		<div class="col mb-5">
+			<p class="h2 font-italic font-weight-light">Explore the world with us</p>
+			<p class="lead font-italic col-md-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, ad
+				nihil quam ducimus distinctio porro, ipsum dolores suscipit mollitia provident est impedit? Eius
+				voluptatibus asperiores, laudantium accusantium debitis et facere.</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="card rounded-0 border-0" *ngFor="let post of posts ; index as blogpostId ; first as isFirst"
+			[class.highlight-card]="blogpostId == 0">
+
+			<div *ngIf="isFirst, else elseBlock" class="mb-5">
+				<a [routerLink]="['/blogpost', blogpostId]" routerLinkActive="router-link-active" class="card-group">
+					<div class="card-image-wrapper">
+						<img src="{{post.image}}" class="card-img card-image" alt="{{post.title}} image">
+					</div>
+				</a>
+				<div class="card-body">
+					<h3 class="card-title">{{post.title  | titlecase }}</h3>
+					<p *ngIf="post.place" class="border-bottom">{{post.place}}, {{post.country}}</p>
+					<p class="card-text">{{post.description}}</p>
+					<div class="d-flex justify-content-between">
+						<a [routerLink]="['/blogpost', blogpostId]" routerLinkActive="router-link-active"
+							class="card-link">Read more...</a>
+						<p class="card-text"><small class="text-muted">Published: {{post.createDate | date}}</small>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<ng-template #elseBlock>
+				<div class="row no-gutters my-3">
+					<div class="col-md-4">
+						<a [routerLink]="['/blogpost', blogpostId]" routerLinkActive="router-link-active"
+							class="card-group">
+							<div class="card-image-wrapper">
+								<img src="{{post.image}}" class="card-img card-image" alt="{{post.title}} image">
+							</div>
+						</a>
+					</div>
+					<div class="col-md-8">
+						<div class="card-body">
+							<h3 class="card-title">{{post.title | titlecase}}</h3>
+							<p *ngIf="post.place" class="border-bottom">{{post.place}}, {{post.country}}</p>
+							<p class="card-text">{{post.description}}</p>
+							<div class="d-flex justify-content-between">
+								<a [routerLink]="['/blogpost', blogpostId]" routerLinkActive="router-link-active"
+									class="card-link">Read more...</a>
+								<p class="card-text"><small class="text-muted">Published: {{post.createDate | date}}</small>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr class="mt-3">
+
+				<div *ngIf="blogpostId % 3 == 0" class="row justify-content-center my-5">
+					<div  class="col-md-6 text-right" >
+						<a [routerLink]="['/travels']" routerLinkActive="router-link-active" type="button">
+							<h2 class="font-italic font-weight-light text-left">...browse our travel offers and find your dream destination today...</h2>
+						</a>
+						<a [routerLink]="['/travels']" routerLinkActive="router-link-active" type="button" class="btn btn-lg btn-outline-info rounded-0 px-5 py-3 my-4">take me there</a>
+					</div>
+				</div>
+				
+			</ng-template>
+
+		</div>
+	</div>
 </div>

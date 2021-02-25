@@ -1,0 +1,13 @@
+* {
+  font-size: 1.5rem;
+}
+
+img {
+  width: auto;
+}
+
+nav {
+  background-image: linear-gradient(rgba(3, 89, 89, 1), rgba(3, 89, 89, 0.8));
+  transition: all 350ms ease-in-out;
+  background-blend-mode: darken;
+}

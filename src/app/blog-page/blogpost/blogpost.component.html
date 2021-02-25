@@ -1,0 +1,61 @@
+<div class="jumbotron jumbotron-fluid text-light">
+	<div class="container">
+		<br><br>
+		<h1 class="display-4">Get inspired</h1>
+		<h1 class="display-3 ml-5">to travel</h1>
+	</div>
+</div>
+
+<div class="container mb-5">
+	<div class="row">
+		<div class="col-md-12">
+			<h5 class="font-italic font-weight-light text-right">{{post.createDate | date : 'fullDate'}}</h5>
+			<p class="lead text-center mt-5">{{post.description}}</p>
+			<h1 class="font-italic text-center mb-5 mt-3">{{post.title | titlecase}}</h1>
+			<div class="col-md-9 mx-auto m-5">
+				<img src="{{post.image}}" alt="Blogpost lead image">
+			</div>
+			<p>{{post.descriptionLong}}</p>
+
+			<div class="mt-5" *ngIf="post.image1">
+				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li *ngIf="post.image1" data-target="#carouselExampleIndicators" data-slide-to="0"
+							class="active"></li>
+						<li *ngIf="post.image2" data-target="#carouselExampleIndicators" data-slide-to="1">
+						</li>
+						<li *ngIf="post.image3" data-target="#carouselExampleIndicators" data-slide-to="2">
+						</li>
+						<li *ngIf="post.image4" data-target="#carouselExampleIndicators" data-slide-to="3">
+						</li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<div class="img-wrapper">
+								<img src="{{post.image1}}" class="d-block w-100" alt="...">
+							</div>
+						</div>
+						<div *ngIf="post.image2" class="carousel-item">
+							<div class="img-wrapper"><img src="{{post.image2}}" class="d-block w-100" alt="..."></div>
+						</div>
+						<div *ngIf="post.image3" class="carousel-item">
+							<div class="img-wrapper"><img src="{{post.image3}}" class="d-block w-100" alt="..."></div>
+						</div>
+						<div *ngIf="post.image4" class="carousel-item">
+							<div class="img-wrapper"><img src="{{post.image4}}" class="d-block w-100" alt="..."></div>
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

@@ -1,0 +1,100 @@
+<div class="jumbotron jumbotron-fluid text-light">
+	<div class="container">
+		<br><br>
+		<h1 class="display-4">book your</h1>
+		<h1 class="display-3 ml-5">travel today</h1>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row my-5 pt-5">
+		<div class="col-lg-5">
+			<h1>{{travelDestination.destinationPlace}}, <br>
+				<span>{{travelDestination.destinationCountry}}</span>
+			</h1>
+			<hr>
+			<p>
+				<fa-icon [icon]="faCalender" title="Date" class="h4"></fa-icon>
+				{{travelDestination.startDate | date :'fullDate'}}
+			</p>
+			<p>
+				<fa-icon [icon]="faClock" title="Time" class="h4"></fa-icon>
+				{{travelDestination.startDate | date :'shortTime'}}
+			</p>
+			<p><span class="lead">{{travelDestination.duration | duration}}</span></p>
+
+
+			<div [ngSwitch]="travelDestination.description | lowercase">
+				<div *ngSwitchCase="'all inclusive'">
+					<fa-icon [icon]="faStar" title="all inclusive" class="h4"></fa-icon> all inclusive
+				</div>
+				<div *ngSwitchCase="'transport included'">
+					<fa-icon [icon]="faPlane" title="transport included" class="h4"></fa-icon> transport
+					included
+				</div>
+				<div *ngSwitchCase="'breakfast, transport included'">
+					<fa-icon [icon]="faBreakfast" title="breakfast included" class="h4"></fa-icon>
+					breakfast included, <fa-icon [icon]="faPlane" title="transport included" class="h4">
+					</fa-icon> transport included
+				</div>
+
+				<div *ngSwitchDefault>{{travelDestination.description | lowercase}}</div>
+			</div>
+
+			<div class="d-flex justify-content-between mt-4">
+				<button class="btn btn-info btn-lg rounded-0 mb-5" (click)="addToCart(travelDestination)">Book for
+					{{travelDestination.price | currency: "EUR"}}</button>
+			</div>
+			<hr>
+			<p>{{travelDestination.descriptionLong}}</p>
+		</div>
+		<div class="col-lg-7 mt-2 mb-5">
+			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li *ngIf="travelDestination.image" data-target="#carouselExampleIndicators" data-slide-to="0"
+						class="active"></li>
+					<li *ngIf="travelDestination.image1" data-target="#carouselExampleIndicators" data-slide-to="1">
+					</li>
+					<li *ngIf="travelDestination.image2" data-target="#carouselExampleIndicators" data-slide-to="2">
+					</li>
+					<li *ngIf="travelDestination.image3" data-target="#carouselExampleIndicators" data-slide-to="3">
+					</li>
+					<li *ngIf="travelDestination.image4" data-target="#carouselExampleIndicators" data-slide-to="4">
+					</li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<div class="img-wrapper"><img src="{{travelDestination.image}}" class="d-block w-100" alt="...">
+						</div>
+					</div>
+					<div *ngIf="travelDestination.image1" class="carousel-item">
+						<div class="img-wrapper"><img src="{{travelDestination.image1}}" class="d-block w-100"
+								alt="..."></div>
+					</div>
+					<div *ngIf="travelDestination.image2" class="carousel-item">
+						<div class="img-wrapper"><img src="{{travelDestination.image2}}" class="d-block w-100"
+								alt="..."></div>
+					</div>
+					<div *ngIf="travelDestination.image3" class="carousel-item">
+						<div class="img-wrapper"><img src="{{travelDestination.image3}}" class="d-block w-100"
+								alt="..."></div>
+					</div>
+					<div *ngIf="travelDestination.image4" class="carousel-item">
+						<div class="img-wrapper"><img src="{{travelDestination.image4}}" class="d-block w-100"
+								alt="..."></div>
+					</div>
+				</div>
+				<a *ngIf="travelDestination.image1" class="carousel-control-prev" href="#carouselExampleIndicators"
+					role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a *ngIf="travelDestination.image1" class="carousel-control-next" href="#carouselExampleIndicators"
+					role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

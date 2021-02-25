@@ -1,14 +1,25 @@
+@import "../styles/colors";
+@import "../styles/cards";
+
 .jumbotron {
-    background-image: url("../../assets/img/travelspg-hero.jpg");
-    background-size: cover;
-    background-position: center;
+  background-image: url("../../assets/img/travelspg-hero.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .jumbotron .display-3 {
-    font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
 }
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
+}
+
+.card-footer-custom {
+  background-color: $secondary-light;
+}
+
+.card-image-wrapper {
+  height: 340px;
 }

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top px-5 pt-2">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top px-sm-5 pt-sm-2">
     <a class="navbar-brand" [routerLink]="['/']" routerLinkActive="router-link-active">
         <img src="../../assets/img/logo-light.png" height="40" alt="logo" loading="lazy">
     </a>
@@ -9,20 +9,20 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/']" routerLinkActive="router-link-active">Home <span
+                <a class="nav-link" [routerLink]="['/']" routerLinkActive="router-link-active" data-toggle="collapse" data-target=".navbar-collapse.show">Home <span
                         class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/blog']" routerLinkActive="router-link-active">Blog</a>
+                <a class="nav-link" [routerLink]="['/blog']" routerLinkActive="router-link-active" data-toggle="collapse" data-target=".navbar-collapse.show">Blog</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/travels']" routerLinkActive="router-link-active">Travel</a>
+                <a class="nav-link" [routerLink]="['/travels']" routerLinkActive="router-link-active" data-toggle="collapse" data-target=".navbar-collapse.show">Travel</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/contact']" routerLinkActive="router-link-active">Contact Us</a>
+                <a class="nav-link" [routerLink]="['/contact']" routerLinkActive="router-link-active" data-toggle="collapse" data-target=".navbar-collapse.show">Contact Us</a>
             </li>
         </ul>
-        <button class="btn btn-outline-light my-2 my-sm-0" type="submit" [routerLink]="['/checkout']"
+        <button class="btn btn-outline-light my-2 my-sm-0 rounded-0" type="submit" [routerLink]="['/checkout']"
             routerLinkActive="router-link-active">Checkout</button>
     </div>
 </nav>

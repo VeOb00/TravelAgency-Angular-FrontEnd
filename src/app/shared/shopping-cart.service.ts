@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
-import { travelDestinations } from './travels-page/travel-destinations';
+import { TravelDestination } from '../travels-page/travel-destinations';
 
 @Injectable({
     providedIn: 'root'
 })
 export class ShoppingCartService {
-    chosenDestinations = [];
+    chosenDestinations: TravelDestination[] = [];
 
     constructor() { }
 
-    addToCart(travelDestinations) {
+    addToCart(travelDestinations: TravelDestination) {
         this.chosenDestinations.push(travelDestinations);
     }
 
